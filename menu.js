@@ -6,6 +6,8 @@ import baralhos from "flashcards.js"
 import adicionarbaralho from "adicionarBaralho.js"
 import adicionarFlashcard from "adicionarFlashcard.js"
 import criarFlashcard from "create.js"
+import atualizarFlashcard from "atualizarFlashcard.js"
+import deletarFlashcard from "deletarFlashcard.js"
 const prompt = PromptSync()
 
 let option =""
@@ -19,5 +21,37 @@ console.log("6-Listar todos os flashcards")
 console.log("7-Sair")
     
 option = prompt("Escolha a opção")
+switch (option) {
+    case "1":
+        criarFlashcard();
+        break;
 
-} while (option==="7");
+    case "2":
+        buscarperguntas();
+        break;
+
+    case "3":
+        atualizarFlashcard(); 
+        break;
+
+    case "4":
+        deletarFlashcard(); 
+        break;
+
+    case "5":
+        buscarID();
+        break;
+
+    case "6":
+        console.log(flashcards);
+        break;
+
+    case "7":
+        console.log("Saindo...");
+        break;
+
+    default:
+        console.log("Opção inválida!");
+}
+
+} while (option!=="7");
