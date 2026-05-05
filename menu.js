@@ -1,13 +1,14 @@
 import PromptSync from "prompt-sync";
-import flashcards from "bancodedados.js"
-import buscarperguntas from "buscadeperguntas.js"
-import buscarID from "buscarID.js"
-import baralhos from "flashcards.js"
-import adicionarbaralho from "adicionarBaralho.js"
-import adicionarFlashcard from "adicionarFlashcard.js"
-import criarFlashcard from "create.js"
-import atualizarFlashcard from "atualizarFlashcard.js"
-import deletarFlashcard from "deletarFlashcard.js"
+import flashcards from "./bancodedados.js"
+import buscarperguntas from "./buscadeperguntas.js"
+import buscarID from "./buscarID.js"
+import baralhos from "./flashcards"
+import adicionarbaralho from "./adicionarBaralho.js"
+import adicionarFlashcard from "./adicionarFlashcard.js"
+import criarFlashcard from "./create.js"
+import atualizarFlashcard from "./atualizarFlashcard.js"
+import atualizarBaralho from "./atualizarBaralho.js"
+import deletarFlashcard from "./deletarFlashcard.js"
 const prompt = PromptSync()
 
 let option =""
