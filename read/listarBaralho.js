@@ -1,2 +1,5 @@
 import baralhos from ".bank/bancoBaralhos.js"
-console.log("Lista de Baralhos: "+baralhos);
+function listarBaralhos(baralhos){
+console.log(baralhos);
+}
+export default listarBaralhos
