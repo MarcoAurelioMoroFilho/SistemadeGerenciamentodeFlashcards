@@ -1,9 +1,9 @@
 # Sistema de Gerenciamento de Flashcards
 INTEGRANTES:
-|
--MARCO AURÉLIO MORO FILHO|
--PEDRO GABRIEL BUENO VALGAS|
--CAIO MIGUEL MARTINS CARMONA PEREIRA|
+ 
+- MARCO AURÉLIO MORO FILHO| 
+- PEDRO GABRIEL BUENO VALGAS|
+- CAIO MIGUEL MARTINS CARMONA PEREIRA|
 
 
 Projeto desenvolvido em JavaScript com Node.js para gerenciamento de flashcards e baralhos diretamente pelo terminal.
