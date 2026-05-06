@@ -1,5 +1,5 @@
-import flashcards from "bank/bancoFlashcards.js"
-function listarFlashcard(flashcards){
+import flashcards from "../bank/bancoFlashcards.js"
+function listarFlashcard(){
 console.log(flashcards)
 }
 export default listarFlashcard

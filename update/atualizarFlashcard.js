@@ -1,14 +1,25 @@
-import flashcards from "bank/bancoFlashcards.js"
-function atualizarFlashcard(id, novaPergunta, novaResposta) {
-    const flashcard = flashcards.find((flashcard) => flashcard.id === id)
+import baralhos from "../bank/bancoBaralhos.js";
+import flashcards from "../bank/bancoFlashcards.js";
+import PromptSync from "prompt-sync";
 
-    if (!flashcard) {
-        return "Flashcard não encontrado."
+function atualizarFlashcard() {
+    const prompt = PromptSync();
+    
+    const id = parseInt(prompt("Digite o ID: "))
+
+    const index = flashcards.findIndex(f => f.id === id)
+
+    if (index === -1) {
+        console.log("Não encontrado")
+        return
     }
 
-    flashcard.pergunta = novaPergunta
-    flashcard.resposta = novaResposta
+    let novaPergunta = prompt("Nova pergunta: ").trim()
+    let novaResposta = prompt("Nova resposta: ").trim()
 
-    return "Flashcard atualizado com sucesso."
+    flashcards[index].pergunta = novaPergunta || flashcards[index].pergunta
+    flashcards[index].resposta = novaResposta || flashcards[index].resposta
+
+    console.log("Atualizado!")
 }
 export default atualizarFlashcard

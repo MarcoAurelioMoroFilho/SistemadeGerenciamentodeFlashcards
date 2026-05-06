@@ -1,10 +1,12 @@
-import baralhos from "./flashcards.js";
-import flashcards from "./bancodedados.js";
+import baralhos from "../bank/bancoBaralhos.js";
+import flashcards from "../bank/bancoFlashcards.js";
 import PromptSync from "prompt-sync";
-const prompt = PromptSync();
+
 
 function buscarID() {
-    const pergunta = parseInt(prompt("Digite o ID da matéria desejada: "))
+    const prompt = PromptSync();
+    
+    const pergunta = parseInt(prompt("Digite o ID da matéria desejada: "));
 
     const materia = baralhos.find(b => b.id === pergunta)
 
@@ -15,7 +17,7 @@ function buscarID() {
 
     const resultado = flashcards.filter(f => f.idBaralho === pergunta)
 
-    console.log(`\nMatéria: ${materia.nome}`)
+    console.log(`\nMatéria: ${materia.titulo}`)
 
     resultado.forEach(f => {
         console.log(`Pergunta: ${f.pergunta}`)
@@ -23,4 +25,4 @@ function buscarID() {
     })
 }
 
-buscarID()
+export default buscarID;

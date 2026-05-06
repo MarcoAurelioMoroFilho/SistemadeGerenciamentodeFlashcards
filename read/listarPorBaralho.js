@@ -1,7 +1,10 @@
-import baralho from "bank/bancoBaralhos.js"
-import flashcards from "bank/bancoFlashcards.js"
+import baralho from "../bank/bancoBaralhos.js"
+import flashcards from "../bank/bancoFlashcards.js"
+import PromptSync from "prompt-sync";
 
-function listarPorBaralho(idBaralho) {
+function listarPorBaralho() {
+    const prompt = PromptSync()
+    let idBaralho = parseInt(prompt("Digite o ID do baralho que deseja listar os flashcards: "))
     const baralhoEncontrado = baralho.find((baralho) => baralho.id === idBaralho)
 
     if (!baralhoEncontrado) {
